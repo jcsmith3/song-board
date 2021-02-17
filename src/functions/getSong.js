@@ -1,6 +1,10 @@
 import axios from 'axios'
 const lastFmKey = 'a33c0a5a6ed97d72bd9e8eb296887099'
 
+const agent = new https.Agent({
+  rejectUnauthorized: false
+});
+
 const getSongData = query => {
 
   const data = axios.get(`https://www.songsterr.com/a/ra/songs.json?pattern=${ query }`)
@@ -18,7 +22,7 @@ const getSongData = query => {
 }
 
 const getSongDetails = query => {
-    const data = axios.get(`http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${lastFmKey}&artist=${query.artist}&track=${query.title}&format=json`).then( data => {
+    const data = axios.get(`http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${lastFmKey}&artist=${query.artist}&track=${query.title}&format=json`, { httpsAgent: agent }).then( data => {
       const track = data.data.track
       // console.log( track )
       return {
