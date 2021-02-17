@@ -42,7 +42,7 @@ module.exports = env =>{
         resolve: {
             mainFields: ['browser', 'module', 'main'],
             fallback: {
-                "https": require.resolve("https-browserify"),
+                "https": false,
                 "http" : false
             }
         },
