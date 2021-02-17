@@ -39,6 +39,13 @@ module.exports = env =>{
             }
             ]
         },
+        resolve: {
+            mainFields: ['browser', 'module', 'main'],
+            fallback: {
+                "https": require.resolve("https-browserify"),
+                "http" : false
+            }
+        },
         devtool: isProd ? 'source-map' : 'eval-cheap-module-source-map'
     }
 }
