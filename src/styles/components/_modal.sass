@@ -6,10 +6,7 @@
 
 .ReactModalPortal .ReactModal
   &__Overlay
-    display: flex
     background-color: #8f0000
-    justify-content: center
-    align-items: center
     transition: opacity 300ms ease-in-out
 
     &--after-open
@@ -18,11 +15,13 @@
       opacity: 0
 
 .modal
+  display: flex
+  flex-direction: column
+  justify-content: space-between
   background-color: colors.$dark-blue
-  width: 40%
-  max-width: 50rem
+  width: 100%
+  height: 100%
   outline: none
-  padding: sizes.$xl
 
   &__title
     width: 100%
@@ -43,7 +42,7 @@
   &__album h3
     display: inline-block
     color: white
-    margin-right: .4rem
+    margin: 0 .4rem
 
   &__action
     padding: sizes.$small
@@ -60,7 +59,7 @@
   &__tag-list
     display: flex
     flex-wrap: wrap
-    justify-content: flex-start
+    justify-content: center
     & h3
       width: 100%
       margin: 1rem 0
@@ -82,3 +81,22 @@
     width: 100%
     padding: sizes.$small
     font-size: sizes.$small
+
+@media ( min-width: 59.5rem)
+
+  .ReactModalPortal .ReactModal
+    &__Overlay
+      display: flex
+      justify-content: center
+      align-items: center
+
+  .modal
+    width: 40%
+    max-width: 50rem
+    padding: sizes.$xl
+
+    &__artist h3,
+    &__album h3
+      display: inline-block
+      color: white
+      margin-right: .4rem

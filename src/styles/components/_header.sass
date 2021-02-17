@@ -3,13 +3,27 @@
 .header
   background-color: color.$off-black
   color: color.$primary_font
-  margin-bottom: size.$xl
-  padding: size.$med 0
+  padding: size.$small 0
+  text-align: center
 
   &__title
-    font-size: size.$xl
+    font-size: size.$med
+    margin-bottom: .3rem
 
   &__subtitle
     color: color.$secondary_font
-    font-size: size.$small
+    font-size: size.$xs
     font-weight: 500
+
+@media ( min-width: 45.5rem)
+  .header
+    background-color: color.$off-black
+    color: color.$primary_font
+    margin-bottom: size.$xl
+    padding: size.$med 0
+
+    &__title
+      font-size: size.$xl
+      margin-bottom: .3rem
+    &__subtitle
+      font-size: size.$small

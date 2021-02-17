@@ -5,17 +5,32 @@
   display: flex
   flex-direction: row
   justify-content: space-between
+  text-align: center
   color: white
   background-color: colors.$dark-blue
   margin: 1rem .5rem 0 .5rem
   padding: .5rem
-  border-radius: 10px
   cursor: pointer
 
   & img
-    margin-right: 2rem
+    display: none
 
   & p
     font-size: sizes.$small
-    width: 100%
+    display: inline-block
     text-align: center
+
+
+@media ( min-width: 45.5rem)
+  .option
+    border-radius: 10px
+    & img
+      display: inline
+      margin-right: 2rem
+
+    &span
+      position: relative
+
+    & p
+      position: relative
+      top: 4px

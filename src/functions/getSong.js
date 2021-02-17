@@ -20,7 +20,6 @@ const getSongData = query => {
 const getSongDetails = query => {
     const data = axios.get(`http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${lastFmKey}&artist=${query.artist}&track=${query.title}&format=json`).then( data => {
       const track = data.data.track
-      // console.log( track )
       return {
         id: track.album.mbid,
         album: {

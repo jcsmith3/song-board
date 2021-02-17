@@ -1,0 +1,10 @@
+@use '../variables/sizes' as size
+.container
+  width: 100%
+  margin: 0 auto
+
+@media ( min-width: 45.5rem)
+  .container
+    max-width: 60rem
+    margin: 0 auto
+    padding: 0 size.$med

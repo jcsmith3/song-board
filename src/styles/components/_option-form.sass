@@ -1,15 +1,30 @@
-
+@use '../variables/_sizes'
+@use '../variables/_colors'
 
 .option-form
   width: 100%
   margin-top: 1rem
+  display: flex
+  flex-direction: column
 
   & input
-    padding: .4rem
-    margin: .5rem 0
+    margin-right: 1rem
+    padding: .8rem 1rem
     width: 100%
+    font-size: sizes.$xs
     border: none
+    background-color: colors.$dark-blue
+    color: colors.$secondary_font
+    flex: 1
+    &:focus
+      outline: none
 
   & button
+    padding: .8rem 1rem
     margin: 0
-    width: 100%
+
+@media ( min-width: 45.5rem)
+  .option-form
+    flex-direction: row
+    & input
+      padding: 0 1rem

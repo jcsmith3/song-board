@@ -3,13 +3,17 @@ import React from 'react'
 export default props => (
 
     <li
-      onClick={ () => props.handleSelectOption( props.option )}
       className="option"
     >
-        <img src={ props.option.data.album.image[0]['#text']}/>
+    <img src={ props.option.data.album.image[0]['#text']}/>
+    <span
+      onClick={ () => props.handleSelectOption( props.option )}
+    >
         <p>
             { props.option.data.name } - { props.option.data.artist.name }
         </p>
+
+    </span>
       <button
         className="btn--flat option__remove"
         onClick={ () => props.handleDeleteOption( props.option ) }
