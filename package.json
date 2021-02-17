@@ -6,7 +6,8 @@
     "scripts": {
         "build": "webpack --env production",
         "start": "node server/server.js",
-        "dev-server": "webpack serve"
+        "dev-server": "webpack serve",
+        "heroku-postbuild": "npm run build"
     },
     "keywords": [],
     "author": "Jerry smith",
