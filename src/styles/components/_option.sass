@@ -1,0 +1,21 @@
+@use '../variables/colors'
+@use '../variables/sizes'
+
+.option
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  color: white
+  background-color: colors.$dark-blue
+  margin: 1rem .5rem 0 .5rem
+  padding: .5rem
+  border-radius: 10px
+  cursor: pointer
+
+  & img
+    margin-right: 2rem
+
+  & p
+    font-size: sizes.$small
+    width: 100%
+    text-align: center

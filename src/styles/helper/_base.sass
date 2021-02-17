@@ -1,0 +1,23 @@
+@use '../variables/colors'
+body
+  font-family: Helvetica, Arial, sans-serif
+  background-color: colors.$dark-blue
+  box-sizing: border-box
+
+button
+  cursor: pointer
+
+  &:disabled
+    cursor: default
+    opacity: .3
+
+a
+  text-decoration: none
+
+.styled-link
+  color: colors.$primary_link
+  transition: box-shadow 300ms ease-in-out
+  &:visited
+    color: colors.$primary_link
+  &:hover
+    box-shadow: 0px 3px 0px #84a5cf

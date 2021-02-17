@@ -1,0 +1,22 @@
+@use '../variables/colors'
+@use '../variables/sizes'
+@use '../variables/mixins'
+
+.action-button
+  background-color: colors.$button-primary
+  color: white
+  font-weight: 800
+  letter-spacing: 1px
+  margin: 1rem 0
+  border: none
+
+  &--large
+    padding: sizes.$med
+    width: 100%
+    font-size: 2rem
+    @include mixins.border_bottom( .8rem )
+
+  &--small
+    padding: .5rem
+    font-size: 1rem
+    @include mixins.border_bottom( .5rem )

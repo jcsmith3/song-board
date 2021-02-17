@@ -1,0 +1,15 @@
+@use '../variables/colors' as color
+@use '../variables/sizes' as size
+.header
+  background-color: color.$off-black
+  color: color.$primary_font
+  margin-bottom: size.$xl
+  padding: size.$med 0
+
+  &__title
+    font-size: size.$xl
+
+  &__subtitle
+    color: color.$secondary_font
+    font-size: size.$small
+    font-weight: 500

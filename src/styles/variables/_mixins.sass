@@ -1,0 +1,5 @@
+@use 'sass:color'
+@use '../variables/colors'
+
+@mixin border_bottom( $size )
+  border-bottom: $size solid color.scale( colors.$button-primary, $lightness: -30% )

@@ -1,0 +1,84 @@
+@use '../variables/colors'
+@use '../variables/sizes'
+
+.ReactModalPortal > div
+  opacity: 0
+
+.ReactModalPortal .ReactModal
+  &__Overlay
+    display: flex
+    background-color: #8f0000
+    justify-content: center
+    align-items: center
+    transition: opacity 300ms ease-in-out
+
+    &--after-open
+      opacity: 1
+    &--before-close
+      opacity: 0
+
+.modal
+  background-color: colors.$dark-blue
+  width: 40%
+  max-width: 50rem
+  outline: none
+  padding: sizes.$xl
+
+  &__title
+    width: 100%
+    text-align: center
+    font-size: sizes.$med
+    margin-bottom: sizes.$med
+
+  & p
+    color: white
+    margin: 1rem 0
+
+  &__artist ,
+  &__album
+    font-size: sizes.$small
+    margin-bottom: .4rem
+
+  &__artist h3,
+  &__album h3
+    display: inline-block
+    color: white
+    margin-right: .4rem
+
+  &__action
+    padding: sizes.$small
+    font-size: sizes.$small
+    font-weight: 800
+    text-align: center
+    color: white
+    cursor: pointer
+    & a
+      color: white
+    &:visited
+      color: white
+
+  &__tag-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    & h3
+      width: 100%
+      margin: 1rem 0
+      text-align: center
+      font-size: sizes.$small
+      color: white
+
+    & li
+      margin: .3rem 0
+      padding: .5rem
+
+      & a
+        white-space: nowrap
+        color: white
+        padding: .5rem
+        background-color: colors.$button-primary
+
+  & button
+    width: 100%
+    padding: sizes.$small
+    font-size: sizes.$small
