@@ -1,4 +1,5 @@
 import axios from 'axios'
+import https from 'https'
 const lastFmKey = 'a33c0a5a6ed97d72bd9e8eb296887099'
 
 const agent = new https.Agent({
